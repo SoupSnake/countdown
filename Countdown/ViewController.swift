@@ -29,28 +29,30 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let defaults = NSUserDefaults.standardUserDefaults()
     
-        let countdownDate: NSDate = NSUserDefaults.standardUserDefaults().objectForKey("countdownDate") as! NSDate
+        if let countdownDate: NSDate = NSUserDefaults.standardUserDefaults().objectForKey("countdownDate") as? NSDate
+        {
 
-        let countdownDateStr = dateFormatter.stringFromDate(countdownDate)
-     
-        
-        dateFormatter.dateFormat = "yyyy/MM/dd hh:mm a Z"
-        let startTime = todaysDate
-        let endTime = countdownDate
-        let hourMinuteComponents: NSCalendarUnit = [.Day, .Hour, .Minute, .Second]
-        let timeDifference = userCalendar.components(
-            hourMinuteComponents,
-            fromDate: startTime,
-            toDate: endTime,
-            options: [])
-        let hours = timeDifference.hour
-        let minutes = timeDifference.minute
-        let days = timeDifference.day
-        let seconds = timeDifference.second
-        
-        firstresultDate.text = "\(days) days"
-        
-        resultDate.text = "\(hours) : \(minutes) : \(seconds)"
+            let countdownDateStr = dateFormatter.stringFromDate(countdownDate)
+         
+            
+            dateFormatter.dateFormat = "yyyy/MM/dd hh:mm a Z"
+            let startTime = todaysDate
+            let endTime = countdownDate
+            let hourMinuteComponents: NSCalendarUnit = [.Day, .Hour, .Minute, .Second]
+            let timeDifference = userCalendar.components(
+                hourMinuteComponents,
+                fromDate: startTime,
+                toDate: endTime,
+                options: [])
+            let hours = timeDifference.hour
+            let minutes = timeDifference.minute
+            let days = timeDifference.day
+            let seconds = timeDifference.second
+            
+            firstresultDate.text = "\(days) days"
+            
+            resultDate.text = "\(hours) : \(minutes) : \(seconds)"
+        }
         
     }
 
