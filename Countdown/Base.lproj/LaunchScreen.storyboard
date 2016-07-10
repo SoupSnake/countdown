@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,20 +17,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Copyright © 2016 Soupsnakes. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="JnU-sf-jsf">
-                                <rect key="frame" x="20" y="548" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Countdown" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rMP-yg-zK7">
+                                <rect key="frame" x="200" y="278" width="199" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Countdown" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rMP-yg-zK7">
-                                <rect key="frame" x="20" y="169" width="560" height="43"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright © 2016 Soupsnakes. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="JnU-sf-jsf">
+                                <rect key="frame" x="170" y="489" width="261" height="68.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68.5" id="VHv-gg-305"/>
+                                    <constraint firstAttribute="width" constant="261" id="vOx-0h-XBj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JnU-sf-jsf" firstAttribute="top" secondItem="rMP-yg-zK7" secondAttribute="bottom" constant="168" id="8eO-ud-u3f"/>
+                            <constraint firstItem="rMP-yg-zK7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Fr6-dh-HPu"/>
+                            <constraint firstItem="rMP-yg-zK7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HRc-x5-z8S"/>
+                            <constraint firstItem="JnU-sf-jsf" firstAttribute="top" secondItem="rMP-yg-zK7" secondAttribute="bottom" constant="168" id="ZX3-io-6LT"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="JnU-sf-jsf" secondAttribute="bottom" constant="42.5" id="gKC-Cl-vmJ"/>
+                            <constraint firstItem="JnU-sf-jsf" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="jw7-lx-uJ8"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="JnU-sf-jsf" secondAttribute="bottom" constant="42.5" id="pei-hH-fXo"/>
+                            <constraint firstItem="JnU-sf-jsf" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wat-fx-yTv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8eO-ud-u3f"/>
+                                <exclude reference="jw7-lx-uJ8"/>
+                                <exclude reference="pei-hH-fXo"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
